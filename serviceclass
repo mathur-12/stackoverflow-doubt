@@ -1,0 +1,25 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Employee;
+import com.example.demo.repository.EmployeeRepository;
+
+
+@Service
+public class EmployeeServiceImpl  {
+
+	EmployeeRepository eRepository;
+	@Autowired
+	public List<Employee> getEmployees() {
+		// TODO Auto-generated method stub
+		//List<Employee>lt=new ArrayList<>();
+		return eRepository.findAll();
+		
+	}
+
+} 
